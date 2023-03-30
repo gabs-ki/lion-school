@@ -1,21 +1,30 @@
-.subtitulo{
-    width: 471px;
-    font-size: 4rem;
-    height: 200px;
-}
+
 .container_inicio{
     display: flex;
     flex-direction: column;
     padding-left: 96px;
     width: 15vw;
+    gap: 20px;
 }
+
+.subtitulo{
+    width: 30vw;
+    font-size: 4rem;
+    flex-wrap: wrap;
+}
+
 .computador{
-    width: 450px;
-    
+    width: 25vw;
 }
+
+.img__estudante {
+    position: relative;
+    left: 10%;
+}
+
 .estudante{
-    width: 257px;
-    height: 400px;
+    width: 15vw;
+
     
 }
 .conteudo{
@@ -30,17 +39,18 @@
     display: flex;
     overflow-y: auto;
     gap: 25px;
-    
     width: 30vw;
-    max-height: 70vh;
+    height: 70vh;
+    max-height: 100%;
+    padding-right: 10px;
     justify-content: space-evenly;
     flex-direction: column;
 }
 .cards{
     align-items: center;
     display: flex;
-    min-width: 500px;
-    min-height: 200px;
+    min-width: 100%;
+    min-height: 25%;
     flex-direction: row;
     justify-content: space-around;
     background-color:#3347B0;
@@ -58,7 +68,7 @@
     color: #ffff;
     font-size: 64px;
     height: 76px;
-    
+    filter: invert(100%);
 }
 .nome__card{
     color: #ffff;

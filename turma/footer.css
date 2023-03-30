@@ -1,0 +1,63 @@
+li {
+    list-style: none;
+}
+
+footer{
+    height: 140px;
+    width: 100vw;
+    background-color: #3347B0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lista__contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.item__lista {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    color: #FFFFFF;
+  
+}
+
+.direito__autor {
+    color: #FFFFFF;
+}
+
+.lista__links {
+    display: flex;
+    gap: 10px;
+}
+
+.fas {
+    font-size: 1.4rem;
+    width: 25px;
+    height: 25px;
+    
+}
+
+.fab {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+    color: #FFFFFF;
+    border: #FFFFFF 2px solid;
+    border-radius: 60px;
+    padding: 15px;
+    transition: .2s;
+}
+
+.fab:hover {
+    color: #c2c2c2;
+    border: #acacac 2px solid;
+    cursor: pointer;
+}

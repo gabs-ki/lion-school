@@ -1,38 +1,37 @@
 'use strict'
 
-import { cursos } from "./cursos.js"
+import { pegarListaDeCursosApi } from "./api/contatosapi.js"
+
+const cursoss = await pegarListaDeCursosApi()
 
 
+const criarCard = (card) => {
 
-const cros = cursos
-
-const criarCard = (indice, curso) => {
     
     const cardCurso = document.createElement('div')
     cardCurso.classList.add('cards')
-    cardCurso.id = cursos.sigla
-    
-    
-    const iconCurso = document.createElement('ion-icon')
-    iconCurso.name = 'globe-outline'
-    iconCurso.classList.add('icone__curso')
 
-    const nomeCurso = document.createElement('p')
-    nomeCurso.classList.add('nome__card')
-    nomeCurso.textContent = cursos[0].sigla
+      
+        const iconCurso = document.createElement('img')
+        iconCurso.classList.add('icone__curso')
+        iconCurso.src = card.icone
+    
+        const nomeCurso = document.createElement('p')
+        nomeCurso.classList.add('nome__card')
+        nomeCurso.textContent = card.sigla
    
-    cardCurso.append(
+        cardCurso.append(
+            iconCurso,
+            nomeCurso
+        )
         
-        iconCurso,
-        nomeCurso
-    )
 
     return cardCurso
 }
 
-const carregarContatos = (indice) => {
+const carregarContatos = () => {
     const container = document.getElementById('container__card')
-    const geracaoCursos = cursos.map(criarCard)
+    const geracaoCursos = cursoss[0].cursos.map(criarCard)
 
     container.replaceChildren(...geracaoCursos)
 }
