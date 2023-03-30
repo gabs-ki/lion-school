@@ -1,0 +1,35 @@
+.container1 {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    background-color:#3347B0;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 96px;
+    padding-right: 96px ;
+    
+}
+.img_logo{
+
+    width: 60px;
+    height: 75px;
+
+}
+.titulo{
+    font-size: 1.5rem;
+    color:#ffff;
+    align-items: center;
+    width: 75px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+   
+}
+.sair{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #ffff;
+}

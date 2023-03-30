@@ -1,0 +1,66 @@
+.subtitulo{
+    width: 471px;
+    font-size: 4rem;
+    height: 200px;
+}
+.container_inicio{
+    display: flex;
+    flex-direction: column;
+    padding-left: 96px;
+    width: 15vw;
+}
+.computador{
+    width: 450px;
+    
+}
+.estudante{
+    width: 257px;
+    height: 400px;
+    
+}
+.conteudo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container__card {
+    display: flex;
+    overflow-y: auto;
+    gap: 25px;
+    
+    width: 30vw;
+    max-height: 70vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.cards{
+    align-items: center;
+    display: flex;
+    min-width: 500px;
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:#3347B0;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    cursor: pointer;
+}
+
+.cards:hover {
+    background-color: #283781;
+}
+
+.icone__curso{
+    color: #ffff;
+    font-size: 64px;
+    height: 76px;
+    
+}
+.nome__card{
+    color: #ffff;
+    font-size: 64px; 
+}
