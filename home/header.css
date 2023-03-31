@@ -1,4 +1,4 @@
-.container1 {
+.container__header {
     display: flex;
     width: 100vw;
     height: 100px;
@@ -32,4 +32,12 @@
     align-items: center;
     font-size: 2rem;
     color: #ffff;
+}
+
+@media(max-width: 600px) {
+    .container__header {
+        justify-content: space-around;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

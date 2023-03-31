@@ -62,3 +62,27 @@ footer{
     cursor: pointer;
 }
 
+@media(max-width: 600px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .direito__autor {
+        height: 10vh;
+    }
+
+    .lista__contato {
+        height: 30vh;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .lista__links {
+        padding-bottom: 20px;
+    }
+
+}
