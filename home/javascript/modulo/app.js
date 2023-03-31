@@ -37,4 +37,4 @@ app.get('/v1/lion-school/cursos', cors(), async function (request, response, nex
 
 app.listen(8080, function(){
     console.log('Servidor aguardando requisições na porta 8080.')
-})
+}) 

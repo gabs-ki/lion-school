@@ -1,60 +1,58 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
 .barra{
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 50px;
   background: #BCC2E5;
-  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
+.lista__legenda {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+}
+
 .status{
   color: #3347B0;
   font-size: 20px;
-  position: relative;
-  left: 96px;
-  top: 15px;
   width: 50px;
 }
 .legenda{
   color: #3347B0;
   font-size: 18px;
-  position: relative;
-  left: 69vw;
-  top: -0.5vh;
   width: 50px;
 }
 .card__azul{
-   position: relative;
    width: 20px;
    height: 20px;
    background: #3347B0;
    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-   left: 75vw;
-   top: -3vh;
-
 }
 .cursando{
   color: #3347B0;
   font-size: 18px;
-  position: relative;
-  left: 76.5vw;
-  top: -5vh;
   width: 50px;
+  padding-left: 25px;
 }
-.card__amarelo{
-    position: relative;
+.card__amarelo{  
     width: 20px;
     height: 20px;
     background: #E5B657;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    left: 81.5vw;
-    top: -7.3vh;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);  
 }
 .finalizado{
     color: #3347B0;
     font-size: 18px;
-    position: relative;
-    left: 83vw;
-    top: -9.5vh;
     width: 50px;
+    padding-left: 25px;
 }
 .titulo__turma{
     color: #3347B0;
@@ -62,30 +60,135 @@
 
 }
 .conteudo__turma{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
     
 }
 .lista__alunos{
-    height: 50vh;
+  padding: 5%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 80vw;
+  overflow-y: auto;
+  justify-content: center;
 }
 .cards__turma{
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    left: 50px;
-    top: 300px;
-    background: #3347B0;
-    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);  
+  width: 200px;
+  height: 300px;
+  background: #3347B0;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 5px;
 }
-.descricao{
+
+.cards__turma:hover{
+  background: #5f4efa;
+}
+
+.cards__turma__amarelo {
+  width: 200px;
+  height: 300px;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.25); 
+  background-color: #E5B657;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.cards__turma__amarelo:hover{
+  background: #f5d088;
+}
+
+.foto__estudante {
+  height: 200px;
+  width: 200px;
+}
+
+.descricao__aluno {
     color: #ffff;
     text-align: center;
-    font-size: 18px;
-    position: absolute;
-    left: 1px;
-    top: 218px;
+    font-size: 18px;  
 }
+
+.menu li{
+  position: relative;
+  float: left;
+  background-color: #3347B0;
+  
+}
+
+.menu li a{
+  color:#FFFFFF; 
+  padding:5px 10px; 
+  display:block;
+  transition: ease-in-out;
+}
+
+.menu li a:hover{
+  color:#fff;
+  text-shadow:0px 0px 5px #fff;
+  text-decoration: underline 2px;
+  
+}
+
+.menu li ul{
+  position:absolute;
+  top:25px;
+  left:0;
+  background-color:#fff;
+  display:none;
+}
+
+.menu li:hover ul, .menu li.over ul{
+  display:block;
+}
+
+.menu li ul li{
+  border:1px solid #5f4efa;
+  display:block;
+  width:150px;
+}
+
+.menu li:hover a {
+  opacity: 0.25;
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+@media(max-width: 600px) {
+  .cards__turma {
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+  }
+
+  .cards__turma img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .cards__turma__amarelo {
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+  }
+
+  .cards__turma__amarelo img {
+    height: 100px;
+    width: 100px;
+  }
+
+}
+
+
+
+
+
