@@ -1,4 +1,4 @@
-export var alunos = [
+ var alunos = [
      
     {       "foto"  : "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png",
             "nome"  : "Aline de Almeida Campos",
@@ -685,3 +685,6 @@ export var alunos = [
         }
 ];
 
+module.exports = {
+    alunos
+}
