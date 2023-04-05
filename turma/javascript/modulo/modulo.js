@@ -59,8 +59,6 @@ const getListaAlunosCurso = function(curso) {
                 }
                 
                 arrayAlunosCurso.push(jsonAlunosCurso)
-            } else {
-                jsonAlunosCurso = null
             }
 
            
@@ -81,6 +79,8 @@ const getListaAlunosCurso = function(curso) {
         return status
     }
 }
+
+
 
 const getListaAlunosStatus = function(curso,status) {
     let statusAluno = status

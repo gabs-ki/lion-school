@@ -4,10 +4,28 @@ import { pegarListaDeCursosApi } from "./api/contatosapi.js"
 
 const cursoss = await pegarListaDeCursosApi()
 
+// export const nomesigla = cursoss[0].cursos
+
+// export const sigla = () => {
+
+//     let siglaa = {}
+//     let array = []
+
+//     nomesigla.forEach((nome) => {
+//         siglaa = {
+//             sigl: nome.sigla
+//         } 
+
+//         array.push(siglaa)
+//     })
+
+//     return array
+// }
+
+// console.log(sigla())
+
 
 const criarCard = (card) => {
-
-    
     const cardCurso = document.createElement('div')
     cardCurso.classList.add('cards')
     cardCurso.setAttribute("curso", card.sigla)
@@ -27,19 +45,21 @@ const criarCard = (card) => {
     )
 
     cardCurso.addEventListener('click', () => {
-        if(cardCurso.getAttribute("curso") == card.sigla) {
-            
-            window.location.href = "http://127.0.0.1:5501/turma/index.html"
-        }
+        localStorage.setItem('curso', nomeCurso.textContent)
+        window.location.href = "http://127.0.0.1:5501/turma/index.html"
+        
     })
         
 
     return cardCurso
 }
 
+
 const carregarContatos = () => {
     const container = document.getElementById('container__card')
     const geracaoCursos = cursoss[0].cursos.map(criarCard)
+    
+    
 
     container.replaceChildren(...geracaoCursos)
 }

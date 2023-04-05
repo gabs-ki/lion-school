@@ -1,8 +1,8 @@
 'use strict'
 
-import { pegarListaDeAlunosApi } from "./api/turmaapi.js"
+import { pegarListaDeAlunosApi, pegarListaDeAlunosCursoApi } from "./api/turmaapi.js"
 
-
+const sigla = localStorage.getItem('curso')
 
 
 const criarCard = (card) => {
@@ -33,13 +33,13 @@ const criarCard = (card) => {
 }
 
 const devolverArray = async () => {
-    const alunoLista = await pegarListaDeAlunosApi()
-
+    const alunoLista = await pegarListaDeAlunosCursoApi(sigla)
+    
     return alunoLista
 }
 
 const alunoLista = await devolverArray()
-console.log(alunoLista)
+
 
 const carregarAlunos = () => {
     const container = document.getElementById('lista__alunos')
