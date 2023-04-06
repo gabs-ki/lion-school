@@ -1,0 +1,164 @@
+.container__conteudo {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.aluno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    gap: 15px;
+}
+
+.perfil__aluno {
+    width: 70%;
+}
+
+.descricao__aluno{
+    color: #3347B0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.grafico{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    width: 30vw;
+    height: 60vh;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.barras{
+    width: 1vw;
+    height: 300px;
+    background: #EEEFF8;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.cor {
+    
+    width: 1vw;
+    height: 90%;
+    left: 115px;
+    top: 150px;
+    background: #3347B0;
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.vermelho{
+    
+    width: 1vw;
+    height: 30%;
+    left: 180px;
+    top: 300px;
+    background: #C11010;
+    box-shadow: 0px 0px 24px #C11010;
+    border-radius: 4px 4px 0px 0px;
+
+}
+
+.amarelo{
+    
+    width: 1vw;
+    height: 50%;
+    left: 245px;
+    top: 250px;
+    background: #E5B657;
+    box-shadow: 0px 0px 24px #E5B657;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.nomes{
+    color: #3347B0;
+    font-weight: bold;
+    
+    
+}
+
+.numeros{
+    color: #3347B0;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.ipr{
+    color: red;
+    font-weight: bold;
+}
+
+.lima{
+    color: #E5B657;
+}
+
+.sair {
+    cursor: pointer;
+}
+
+.sair:hover{
+    font-weight: bold;
+    
+}
+
+@media(max-width: 600px){
+    .container__conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .aluno {
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        height: 100%;
+    }
+
+    .descricao__aluno {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-right: 20px;
+    }
+
+    .perfil__aluno {
+        width: 35vw;
+    }
+
+    .grafico {
+        width: 95%;
+        height: 25vh;
+        gap: 5%;
+    }
+
+    .barras {
+        width: 3vw;
+    }
+
+    .cor {
+        width: 3vw;
+    }
+}

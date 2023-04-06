@@ -6,19 +6,36 @@ import { pegarListaDeAlunosStatusApi } from "./api/turmaapi.js"
 
 const sigla = localStorage.getItem('curso')
 
-const devolverArrayStatus = async () => {
+const devolverArrayStatusFinalizado = async () => {
     const statusFinalizado = document.getElementById('status__finalizado')
     const aluno = await pegarListaDeAlunosStatusApi(sigla, statusFinalizado.textContent)
-    console.log(aluno)
+    
 
    return aluno
 }
 
-const add = await devolverArrayStatus()
+const voltarTela = () => {
+    const sair = document.getElementById('sair')
+    sair.addEventListener('click', () => {
+        window.location.href = 'http://127.0.0.1:5501/home/index.html'
+    })
+}
+
+const devolverArrayStatusCursando = async () => {
+    const statusCursando = document.getElementById('status__cursando')
+    const aluno = await pegarListaDeAlunosStatusApi(sigla, statusCursando.textContent)
+
+    return aluno
+}
+
+const addCursando = await devolverArrayStatusCursando()
+
+const addFinalizados = await devolverArrayStatusFinalizado()
 
 const criarAluno = (card) => {
     const cardAluno = document.createElement('div')
     cardAluno.classList.add('cards__turma')
+    cardAluno.setAttribute('matricula', card.matricula)
 
     const fotoAluno = document.createElement('img')
     fotoAluno.classList.add('foto__estudante')
@@ -46,6 +63,7 @@ const criarCard = (card) => {
 
     const cardAluno = document.createElement('div')
     cardAluno.classList.add('cards__turma')
+    cardAluno.setAttribute('matricula', card.matricula)
 
     const fotoAluno = document.createElement('img')
     fotoAluno.classList.add('foto__estudante')
@@ -66,12 +84,19 @@ const criarCard = (card) => {
 
         let container =  document.getElementById('lista__alunos')
 
-        const geracaoEstudantes = add[0].turma.map(criarAluno)
+        const geracaoEstudantes = addFinalizados[0].turma.map(criarAluno)
       
         
         container.replaceChildren(...geracaoEstudantes)
       
         
+    })
+
+    cardAluno.addEventListener('click', async () => {
+        localStorage.setItem('matricula', card.matricula)
+       
+        
+        window.location.href = "http://127.0.0.1:5501/aluno/index.html"
     })
     
 
@@ -84,7 +109,7 @@ const criarCard = (card) => {
 
 }
 
-const apagar = async () => {
+const mostrarAlunosGeral = async () => {
     const text = document.getElementById('status__geral')
     
     const cardAluno = document.getElementById('lista__alunos')
@@ -98,6 +123,20 @@ const apagar = async () => {
         container.replaceChildren(...geracaoEstudantes)
     })
     
+    return cardAluno
+}
+
+const mostrarAlunosCursando = async () => {
+    const statusCursando = document.getElementById('status__cursando')
+
+    const cardAluno = document.getElementById('lista__alunos')
+    statusCursando.addEventListener('click', async () => {
+        const container = document.getElementById('lista__alunos')
+        const geracaoEstudantes = addCursando[0].turma.map(criarAluno)
+
+        container.replaceChildren(...geracaoEstudantes)
+    })
+
     return cardAluno
 }
 
@@ -117,9 +156,10 @@ const carregarAlunos = () => {
   
     
     container.replaceChildren(...geracaoEstudantes)
-    container.replaceChild(apagar())
+    container.replaceChild(mostrarAlunosGeral(), mostrarAlunosCursando())
    
     
 }
 
+voltarTela()
 carregarAlunos() 
