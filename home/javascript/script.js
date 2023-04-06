@@ -46,6 +46,7 @@ const criarCard = (card) => {
 
     cardCurso.addEventListener('click', () => {
         localStorage.setItem('curso', nomeCurso.textContent)
+        
         window.location.href = "http://127.0.0.1:5501/turma/index.html"
         
     })

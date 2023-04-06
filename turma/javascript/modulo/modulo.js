@@ -81,7 +81,6 @@ const getListaAlunosCurso = function(curso) {
 }
 
 
-
 const getListaAlunosStatus = function(curso,status) {
     let statusAluno = status
     let cursoAluno = curso
@@ -126,8 +125,6 @@ const getListaAlunosStatus = function(curso,status) {
         return statusBoolean
     }
 }
-
-
 
 
 module.exports = {
