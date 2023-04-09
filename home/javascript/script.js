@@ -4,25 +4,7 @@ import { pegarListaDeCursosApi } from "./api/contatosapi.js"
 
 const cursoss = await pegarListaDeCursosApi()
 
-// export const nomesigla = cursoss[0].cursos
 
-// export const sigla = () => {
-
-//     let siglaa = {}
-//     let array = []
-
-//     nomesigla.forEach((nome) => {
-//         siglaa = {
-//             sigl: nome.sigla
-//         } 
-
-//         array.push(siglaa)
-//     })
-
-//     return array
-// }
-
-// console.log(sigla())
 
 
 const criarCard = (card) => {
@@ -38,6 +20,9 @@ const criarCard = (card) => {
     const nomeCurso = document.createElement('p')
     nomeCurso.classList.add('nome__card')
     nomeCurso.textContent = card.sigla
+    nomeCurso.setAttribute("cursoNome", card.nome)
+
+   
 
     cardCurso.append(
         iconCurso,
@@ -46,6 +31,8 @@ const criarCard = (card) => {
 
     cardCurso.addEventListener('click', () => {
         localStorage.setItem('curso', nomeCurso.textContent)
+        localStorage.setItem('nomeCurso', nomeCurso.getAttribute('cursoNome') )
+        
         
         window.location.href = "http://127.0.0.1:5501/turma/index.html"
         

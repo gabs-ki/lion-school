@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./javascript/script.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/ddaca44862.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./footer.css">
@@ -27,16 +28,24 @@
     </header>
 
     <main>
-        <section class="container__conteudo">
+        <section class="container__conteudo" id="container__conteudo">
 
-            <div class="aluno">
+            <div class="conteudo__aluno" id="conteudo__aluno">
+
+            </div>
+
+            <!-- <div class="aluno">
                 <img class="perfil__aluno" src="./img/aluno.png" alt="">
                 <p class="descricao__aluno">JOSÉ MATHEUS DA SILVA MIRANDA</p>
-            </div>
+            </div> -->
     
             <div class="grafico">
+
+                <div class="chart-area" id="chart-area">
+                    <canvas id="myChart" style="width: 25vw; height: 400px; display: flex;"></canvas>
+                </div>
     
-                <div class="bloco">
+                <!-- <div class="bloco">
     
                     <div class="numeros">
                         <p>90</p>
@@ -122,7 +131,7 @@
                     <p class="nomes">PFE</p>
                 </div>
                     
-                </div>
+                </div> -->
     
                
     

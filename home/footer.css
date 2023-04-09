@@ -51,15 +51,19 @@ footer{
     height: 40px;
     font-size: 1.6rem;
     color: #FFFFFF;
-   
     padding-left: 20%;
     transition: .2s;
 }
 
 .fab:hover {
-    color: #c2c2c2;
-    border: #acacac 2px solid;
+    color: #797979;
     cursor: pointer;
+}
+
+.lista__links li:hover {
+    border: 2px solid #797979;
+    border-radius: 50%;
+    width: 100%;
 }
 
 @media(max-width: 600px){

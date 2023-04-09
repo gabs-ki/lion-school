@@ -20,6 +20,23 @@
   width: 50px;
 }
 
+.filtro__ano {
+  text-align: center;
+  font-weight: bold;
+  color: #3347B0;
+  font-size: 1.2rem;
+  position: relative;
+  left: 5%;
+}
+
+.input_ano {
+  border: none;
+  height: 20px;
+  width: 100px;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+
 .legenda{
   color: #3347B0;
   font-size: 18px;
@@ -54,11 +71,16 @@
   padding-left: 25px;
 }
 
+.container__titulo__turma {
+  width: 100%;
+}
+
 
 .titulo__turma{
   color: #3347B0;
   font-size: 64px;
-
+  width: 100%;
+  text-align: center;
 }
 
 .conteudo__turma{
