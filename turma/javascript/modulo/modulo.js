@@ -1,16 +1,20 @@
 var listaTurma = require('../alunos.js')
 
+//Variavel para entrar na Json do Import
 const lista = listaTurma.alunos
  
 
-
+// Traz a lista de alunos completa
 const getListaTurmaCompleta = function() {
     let status = true
     let jsonTurma = {}
     let arrayTurma = []
     let jsonAlunosTurma = {}
 
+    //Entrar no import e percorrer o array
     lista.forEach((cardTurma) => {
+
+        //Adiciona os dados em Json
         jsonTurma = {
             foto: cardTurma.foto,
             nome: cardTurma.nome,
@@ -19,14 +23,16 @@ const getListaTurmaCompleta = function() {
             curso: cardTurma.curso,
             status: cardTurma.status
         }
-
+        //Adiciona o Json em um Array
         arrayTurma.push(jsonTurma)
     })
 
+    //Adiciona o Array em outro json
     jsonAlunosTurma = {
         turma: arrayTurma
     }
 
+    //Validação de vazio ou erro
     if(jsonTurma != undefined) {
         return jsonAlunosTurma
     } else {
@@ -35,7 +41,9 @@ const getListaTurmaCompleta = function() {
     }
 }
 
+//Traz a lista de alunos por curso
 const getListaAlunosCurso = function(curso) {
+    let cursoSigla = curso
     let status = true
     let jsonAlunosCurso = {}
     let arrayAlunosCurso = []
@@ -45,9 +53,10 @@ const getListaAlunosCurso = function(curso) {
 
     lista.forEach((cardAlunosCurso) => {
 
+        //Percorrer a lista mais a fundo até chegar no curso
         cardAlunosCurso.curso.forEach((cardCurso) => {
 
-            if(curso == cardCurso.sigla){
+            if(cursoSigla == cardCurso.sigla){
                 
                 jsonAlunosCurso = {
                     foto: cardAlunosCurso.foto,
@@ -80,7 +89,7 @@ const getListaAlunosCurso = function(curso) {
     }
 }
 
-
+//Traz a lista de alunos por curso e status
 const getListaAlunosStatus = function(curso,status) {
     let statusAluno = status
     let cursoAluno = curso
@@ -126,7 +135,7 @@ const getListaAlunosStatus = function(curso,status) {
     }
 }
 
-
+//Exporta as funções
 module.exports = {
     getListaTurmaCompleta,
     getListaAlunosCurso,

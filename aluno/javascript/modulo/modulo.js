@@ -1,16 +1,16 @@
 var listaAlunos = require('../alunos.js')
 
-
-
+ 
+//Traz o aluno de acordo com a matrícula
 const getMatricula = function(matricula){
-    matriculaAluno = matricula
-    let listaInformacoesJson = {}
-    let informacoesDisciplinasArray = []
-    let informacoesDisciplinasJson
+    alunoMatricula = matricula
+    let listaJson = {}
+    let disciplinasArray = []
+    let disciplinasJson = {}
 
-    listaAlunos.alunos.forEach(function(aluno){
-        if(matriculaAluno == aluno.matricula){
-            listaInformacoesJson = {
+    listaAlunos.alunos.forEach((aluno) => {
+        if(alunoMatricula == aluno.matricula){
+            listaJson = {
                 nome: aluno.nome,
                 foto: aluno.foto,
                 matricula: aluno.matricula,
@@ -22,26 +22,26 @@ const getMatricula = function(matricula){
                 conclusao: aluno.curso[0].conclusao
             }
 
-            aluno.curso[0].disciplinas.forEach(function(listaDisciplina){
-                listaInformacoesJson.disciplinas = informacoesDisciplinasArray
+            aluno.curso[0].disciplinas.forEach((listaDisciplina) => {
+                listaJson.disciplinas = disciplinasArray
 
-                informacoesDisciplinasJson = {
+                disciplinasJson = {
                     nomeDisciplina: listaDisciplina.nome,
                     sigla: listaDisciplina.nome,
                     media: listaDisciplina.media,
                     status: listaDisciplina.status
                 }
-                informacoesDisciplinasArray.push(informacoesDisciplinasJson)
+                disciplinasArray.push(disciplinasJson)
             })
 
             
         }
     })
-    return listaInformacoesJson
+    return listaJson
 }
 
 
-
+//Exporta as funções
 module.exports = {
     getMatricula
 }

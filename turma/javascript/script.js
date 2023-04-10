@@ -1,6 +1,6 @@
 'use strict'
 
-import { pegarListaDeAlunosApi, pegarListaDeAlunosCursoApi } from "./api/turmaapi.js"
+import { pegarListaDeAlunosCursoApi } from "./api/turmaapi.js"
 
 import { pegarListaDeAlunosStatusApi } from "./api/turmaapi.js"
 
@@ -19,7 +19,7 @@ const devolverArrayStatusFinalizado = async () => {
 const voltarTela = () => {
     const sair = document.getElementById('sair')
     sair.addEventListener('click', () => {
-        window.location.href = 'http://127.0.0.1:5501/home/index.html'
+        window.location.href = 'http://127.0.0.1:5500/lion-school/home/index.html'
     })
 }
 
@@ -73,7 +73,7 @@ const criarAlunoFinalizados = (card) => {
         localStorage.setItem('matricula', card.matricula)
        
         
-        window.location.href = "http://127.0.0.1:5501/aluno/index.html"
+        window.location.href = "http://127.0.0.1:5500/lion-school/aluno/index.html"
     })
 
     
@@ -122,7 +122,7 @@ const criarCard = (card) => {
         localStorage.setItem('matricula', card.matricula)
        
         
-        window.location.href = "http://127.0.0.1:5501/aluno/index.html"
+        window.location.href = "http://127.0.0.1:5500/lion-school/aluno/index.html"
     })
     
 
@@ -185,12 +185,12 @@ const mostrarAlunosCursando = async () => {
         
         
         if (!inputYear.value) {
-            console.log(typeof(inputYear.value))
+            
             container.replaceChild(
                 zerarFiltro()
             )
         } else {
-            console.log(typeof(inputYear.value))
+            
             container.replaceChild(
                 filtroPorAnoCursando()
             )

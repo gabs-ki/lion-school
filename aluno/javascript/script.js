@@ -23,7 +23,7 @@ const aluno = await devolverJsonMatriculaAlunos()
 const voltarTela = () => {
     const sair = document.getElementById('sair')
     sair.addEventListener('click', () => {
-        window.location.href = 'http://127.0.0.1:5501/turma/index.html'
+        window.location.href = 'http://127.0.0.1:5500/lion-school/turma/index.html'
     })
 }
 

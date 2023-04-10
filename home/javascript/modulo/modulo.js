@@ -2,6 +2,7 @@ var listaCursos = require('../cursos')
 
 const lista = listaCursos.cursos
 
+//Traz a lista de cursos
 const getListaCursos = function () {
     let status = true
     let arrayCursos = []
@@ -31,8 +32,8 @@ const getListaCursos = function () {
     }
 }
 
- 
-
+  
+//Exporta as funções
 module.exports = {
     getListaCursos
 }

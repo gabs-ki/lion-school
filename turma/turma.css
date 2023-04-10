@@ -217,6 +217,22 @@
   .lista__legenda {
     display: flex;
     flex-direction: column;
+    width: 120px;
+    height: 100%;
+  }
+
+  .lista__legenda p {
+    font-size: 0.9rem;
+  }
+
+  .card__azul {
+    height: 15px;
+    width: 15px;
+  }
+
+  .card__amarelo {
+    height: 15px;
+    width: 15px;
   }
 
   .titulo__turma {
@@ -260,6 +276,15 @@
   .cards__turma__amarelo p {
     font-size: 1.5rem;
     width: 80%;
+  }
+
+  .filtro__ano {
+    width: 100px;
+    font-size: 0.8rem;
+  }
+
+  .input_ano {
+    padding-left: 0px;
   }
 
 }
